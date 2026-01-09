@@ -328,7 +328,7 @@ export default function Home() {
                     </span>
                   </div>
                   <p className="text-sm text-gray-500 max-w-xl">
-                    Local-first Flask API that parses free-form text into structured JSON for
+                    local-first flask api that parses free-form text into structured json for
                     calendar events and reminders.
                   </p>
                   <div className="flex gap-4 pt-1 text-xs font-mono">
@@ -355,15 +355,15 @@ export default function Home() {
                 <div className="flex-1 space-y-1">
                   <div className="flex items-baseline justify-between gap-4">
                     <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors">
-                      MNIST Neural Network
+                      mnist neural network
                     </h3>
                     <span className="text-xs font-mono text-gray-400">
-                      Python
+                      python
                     </span>
                   </div>
                   <p className="text-sm text-gray-500 max-w-xl">
-                    Neural network with He initialization, ReLU activation, 
-                    and Adam optimization on the MNIST. 98% test accuracy.
+                    neural network with he initialization, relu activation, 
+                    and adam optimization on the mnist. 98% test accuracy.
                   </p>
                   <div className="flex gap-4 pt-1 text-xs font-mono">
                     <a
