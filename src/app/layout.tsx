@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import FlowBurstOverlay from "@/components/FlowBurstOverlay";
+import Flow from "@/components/Flow";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <div className="relative min-h-screen w-full">
           <div className="noise" />
-          <FlowBurstOverlay />
+          <Flow />
           <div className="relative z-10 flex flex-col items-center justify-center w-full">
             {children}
           </div>

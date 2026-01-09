@@ -76,7 +76,11 @@ export default function PageTabs({ about, projects, writing }: PageTabsProps) {
         <div
           role="tabpanel"
           aria-labelledby={activeTab}
-          className="transition-opacity duration-150"
+          className={`transition-opacity duration-150 ${
+            activeTab === 'projects' 
+              ? 'md:overflow-visible overflow-y-auto max-h-[calc(100vh-12rem)] md:max-h-none' 
+              : ''
+          }`}
         >
           {renderContent()}
         </div>
