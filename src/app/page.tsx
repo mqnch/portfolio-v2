@@ -45,7 +45,12 @@ export default function Home() {
             </div>
 
             <div className="flex items-baseline justify-between gap-6">
-              <p>
+              <a
+                href="https://github.com/mqnch/chess-ai"
+                target="_blank"
+                rel="noreferrer"
+                className="underline-offset-4 hover:underline"
+              >
                 <span className="text-gray-400">
                   ↳ self-learning chess ai
                 </span>
@@ -53,11 +58,16 @@ export default function Home() {
                   {' '}
                   — alphazero-like mcts + self-play
                 </span>
-              </p>
+              </a>
             </div>
 
             <div className="flex items-baseline justify-between gap-6">
-              <p>
+              <a
+                href="https://github.com/mqnch/event-date-time-nlp"
+                target="_blank"
+                rel="noreferrer"
+                className="underline-offset-4 hover:underline"
+              >
                 <span className="text-gray-400">
                   ↳ event-date-time parser
                 </span>
@@ -65,11 +75,16 @@ export default function Home() {
                   {' '}
                   — converts text into json
                 </span>
-              </p>
+              </a>
             </div>
 
             <div className="flex items-baseline justify-between gap-6">
-              <p>
+              <a
+                href="https://github.com/mqnch/numpy-mnist-nn"
+                target="_blank"
+                rel="noreferrer"
+                className="underline-offset-4 hover:underline"
+              >
                 <span className="text-gray-400">
                   ↳ mnist neural network
                 </span>
@@ -77,7 +92,7 @@ export default function Home() {
                   {' '}
                   — from scratch with math
                 </span>
-              </p>
+              </a>
             </div>
           </div>
 
