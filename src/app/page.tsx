@@ -52,6 +52,23 @@ export default function Home() {
                 className="underline-offset-4 hover:underline"
               >
                 <span className="text-gray-400">
+                  ↳ hearth.
+                </span>
+                <span className="text-gray-500">
+                  {' '}
+                  — house listing analyzer + renovation visualizer
+                </span>
+              </a>
+            </div>
+
+            <div className="flex items-baseline justify-between gap-6">
+              <a
+                href="https://github.com/mqnch/chess-ai"
+                target="_blank"
+                rel="noreferrer"
+                className="underline-offset-4 hover:underline"
+              >
+                <span className="text-gray-400">
                   ↳ self-learning chess ai
                 </span>
                 <span className="text-gray-500">
@@ -73,7 +90,7 @@ export default function Home() {
                 </span>
                 <span className="text-gray-500">
                   {' '}
-                  — converts text into json
+                  — converts natural text into json
                 </span>
               </a>
             </div>
@@ -90,7 +107,7 @@ export default function Home() {
                 </span>
                 <span className="text-gray-500">
                   {' '}
-                  — from scratch with math
+                  — built from scratch using lin. alg
                 </span>
               </a>
             </div>
@@ -234,8 +251,8 @@ export default function Home() {
         </section>
       }
       projects={
-        <section className="w-full space-y-8 font-mono text-sm text-gray-400">
-          <div className="space-y-4">
+        <section className="w-full space-y-6 font-mono text-sm text-gray-400">
+          <div className="space-y-3">
             <div className="group border-t border-gray-900 pt-5 hover:border-gray-700 transition-colors">
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
                 <img
@@ -266,6 +283,39 @@ export default function Home() {
                     </a>
                     <a
                       href="https://github.com/mqnch/jobmaxxing"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-gray-500 hover:text-gray-200 underline-offset-4 hover:underline"
+                    >
+                      source
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="group border-t border-gray-900 pt-5 hover:border-gray-700 transition-colors">
+              <div className="flex flex-col gap-4 md:flex-row md:items-start">
+                <img
+                  src="/hearth.jpeg"
+                  alt="hearth website screenshot"
+                  className="h-20 w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100"
+                />
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors">
+                      hearth.
+                    </h3>
+                    <span className="text-xs font-mono text-gray-400">
+                      next.js / typescript / tailwind / fastapi / gemini api
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-500 max-w-xl">
+                    real estate listing analyzer which fixes accessibility issues by generating renovation visualizations & cost estimates.
+                  </p>
+                  <div className="flex gap-4 pt-1 text-xs font-mono">
+                    <a
+                      href="https://github.com/mqnch/chess-ai"
                       target="_blank"
                       rel="noreferrer"
                       className="text-gray-500 hover:text-gray-200 underline-offset-4 hover:underline"
@@ -358,7 +408,7 @@ export default function Home() {
                       mnist neural network
                     </h3>
                     <span className="text-xs font-mono text-gray-400">
-                      python
+                      python / numpy
                     </span>
                   </div>
                   <p className="text-sm text-gray-500 max-w-xl">
