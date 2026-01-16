@@ -46,7 +46,7 @@ export default function Home() {
 
             <div className="flex items-baseline justify-between gap-6">
               <a
-                href="https://github.com/mqnch/chess-ai"
+                href="https://github.com/mqnch/hearth."
                 target="_blank"
                 rel="noreferrer"
                 className="underline-offset-4 hover:underline"
