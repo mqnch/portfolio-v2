@@ -250,7 +250,7 @@ export default function Home() {
         </section>
       }
       projects={
-        <section className="w-full space-y-6 font-mono text-sm text-gray-400">
+        <section className="w-full space-y-6 font-mono text-sm text-gray-400 pb-20 md:pb-0">
           <div className="space-y-3">
             <div className="group border-t border-gray-900 pt-5 hover:border-gray-700 transition-colors">
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
