@@ -37,29 +37,12 @@ export default function PageTabs({ about, projects, writing }: PageTabsProps) {
   // Check if content is scrollable and update scroll indicator
   useEffect(() => {
     const checkScroll = () => {
-      if (activeTab === 'projects') {
-        // On mobile, check window scroll; on desktop, check container scroll
-        const isMobile = window.innerWidth < 768;
-        
-        if (isMobile) {
-          // Mobile: check window scroll position
-          const scrollTop = window.scrollY || document.documentElement.scrollTop;
-          const scrollHeight = document.documentElement.scrollHeight;
-          const clientHeight = window.innerHeight;
-          const hasMoreContent = scrollHeight > clientHeight && scrollTop + clientHeight < scrollHeight - 10;
-          const canScrollUp = scrollTop > 10;
-          setShowScrollIndicator(hasMoreContent);
-          setShowScrollUpIndicator(canScrollUp);
-        } else {
-          // Desktop: check container scroll
-          if (tabPanelRef.current) {
-            const { scrollTop, scrollHeight, clientHeight } = tabPanelRef.current;
-            const hasMoreContent = scrollHeight > clientHeight && scrollTop + clientHeight < scrollHeight - 10;
-            const canScrollUp = scrollTop > 10;
-            setShowScrollIndicator(hasMoreContent);
-            setShowScrollUpIndicator(canScrollUp);
-          }
-        }
+      if (tabPanelRef.current && activeTab === 'projects') {
+        const { scrollTop, scrollHeight, clientHeight } = tabPanelRef.current;
+        const hasMoreContent = scrollHeight > clientHeight && scrollTop + clientHeight < scrollHeight - 10;
+        const canScrollUp = scrollTop > 10;
+        setShowScrollIndicator(hasMoreContent);
+        setShowScrollUpIndicator(canScrollUp);
       } else {
         setShowScrollIndicator(false);
         setShowScrollUpIndicator(false);
@@ -69,25 +52,17 @@ export default function PageTabs({ about, projects, writing }: PageTabsProps) {
     // Check on mount and when tab changes
     checkScroll();
     
-    // Check on scroll - listen to both window (mobile) and container (desktop)
-    const handleScroll = () => checkScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
+    // Check on scroll
     const tabPanel = tabPanelRef.current;
     if (tabPanel) {
-      tabPanel.addEventListener('scroll', handleScroll);
+      tabPanel.addEventListener('scroll', checkScroll);
       // Also check after a short delay to account for content loading
       const timeoutId = setTimeout(checkScroll, 100);
       return () => {
-        window.removeEventListener('scroll', handleScroll);
-        tabPanel.removeEventListener('scroll', handleScroll);
+        tabPanel.removeEventListener('scroll', checkScroll);
         clearTimeout(timeoutId);
       };
     }
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
   }, [activeTab]);
 
   return (
@@ -139,7 +114,7 @@ export default function PageTabs({ about, projects, writing }: PageTabsProps) {
             aria-labelledby={activeTab}
             className={`transition-opacity duration-150 ${
               activeTab === 'projects' 
-                ? 'md:overflow-y-auto md:max-h-[calc(100vh-26rem)] md:[&::-webkit-scrollbar]:hidden md:[-ms-overflow-style:none] md:[scrollbar-width:none]' 
+                ? 'overflow-y-auto max-h-[calc(100vh-10rem)] md:max-h-[calc(100vh-26rem)] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]' 
                 : ''
             }`}
           >
