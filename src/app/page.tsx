@@ -19,7 +19,6 @@ export default function Home() {
               />
               <p>uwaterloo — applied math & machine learning</p>
             </div>
-            <span className="text-xs text-gray-600">2025—2029</span>
           </div>
 
           <div className="border-t border-gray-900 pt-3 space-y-1">
