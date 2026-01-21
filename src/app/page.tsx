@@ -118,7 +118,12 @@ export default function Home() {
             </p>
 
             <div className="flex items-baseline justify-between gap-6">
-              <div className="flex items-center gap-2">
+              <a
+                href="https://github.com/mqnch/Cumo"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 underline-offset-4 hover:underline"
+              >
                 <p>↳</p>
                 <img
                   src="/cumo.svg"
@@ -127,7 +132,7 @@ export default function Home() {
                   style={{ opacity: 0.85 }}
                 />
                 <p>Cumo — co-founder & lead software developer</p>
-              </div>
+              </a>
               <span className="text-xs text-gray-600">2025</span>
             </div>
 
