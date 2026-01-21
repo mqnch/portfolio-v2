@@ -122,8 +122,10 @@ export default function PageTabs({ about, projects, writing }: PageTabsProps) {
           </div>
           
           {/* Scroll up indicator arrow with gradient fade */}
-          {activeTab === 'projects' && showScrollUpIndicator && (
-            <div className="absolute top-0 left-0 right-0 pointer-events-none">
+          {activeTab === 'projects' && (
+            <div className={`absolute top-0 left-0 right-0 pointer-events-none transition-opacity duration-300 ease-in-out ${
+              showScrollUpIndicator ? 'opacity-100' : 'opacity-0'
+            }`}>
               <div className="relative h-16 bg-gradient-to-b from-black/20 md:from-black/60 to-transparent flex items-start justify-center pt-4">
                 <div className="flex flex-col items-center animate-bounce">
                   <svg
@@ -145,8 +147,10 @@ export default function PageTabs({ about, projects, writing }: PageTabsProps) {
           )}
           
           {/* Scroll down indicator arrow with gradient fade */}
-          {activeTab === 'projects' && showScrollIndicator && (
-            <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
+          {activeTab === 'projects' && (
+            <div className={`absolute bottom-0 left-0 right-0 pointer-events-none transition-opacity duration-300 ease-in-out ${
+              showScrollIndicator ? 'opacity-100' : 'opacity-0'
+            }`}>
               <div className="relative h-16 bg-gradient-to-t from-black/20 md:from-black/60 to-transparent flex items-end justify-center pb-2">
                 <div className="flex flex-col items-center animate-bounce">
                   <svg

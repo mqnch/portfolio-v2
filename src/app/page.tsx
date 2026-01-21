@@ -121,12 +121,12 @@ export default function Home() {
               <div className="flex items-center gap-2">
                 <p>↳</p>
                 <img
-                  src="/cclogosmall.png"
-                  alt="CalendarCompanion logo"
+                  src="/cumo.svg"
+                  alt="Cumo logo"
                   className="h-4 w-4 rounded-sm"
                   style={{ opacity: 0.85 }}
                 />
-                <p>CalendarCompanion — co-founder & lead software developer</p>
+                <p>Cumo — co-founder & lead software developer</p>
               </div>
               <span className="text-xs text-gray-600">2025</span>
             </div>
@@ -296,25 +296,25 @@ export default function Home() {
             <div className="group border-t border-gray-900 pt-5 hover:border-gray-700 transition-colors">
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
                 <img
-                  src="/hearth.jpeg"
-                  alt="hearth website screenshot"
+                  src="/cumo.png"
+                  alt="Cumo command bar screenshot"
                   className="h-20 w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100"
                 />
                 <div className="flex-1 space-y-1">
                   <div className="flex items-baseline justify-between gap-4">
                     <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors">
-                      hearth.
+                      Cumo
                     </h3>
                     <span className="text-xs font-mono text-gray-400">
-                      next.js / typescript / tailwind / fastapi / gemini api
+                      electron / typescript / tailwind / flask / huey / google oauth
                     </span>
                   </div>
                   <p className="text-sm text-gray-500 max-w-xl">
-                    real estate listing analyzer which fixes accessibility issues by generating renovation visualizations & cost estimates.
+                    always-on command bar that instantly turns natural language into scheduled events.
                   </p>
                   <div className="flex gap-4 pt-1 text-xs font-mono">
                     <a
-                      href="https://github.com/mqnch/chess-ai"
+                      href="https://github.com/mqnch/Cumo"
                       target="_blank"
                       rel="noreferrer"
                       className="text-gray-500 hover:text-gray-200 underline-offset-4 hover:underline"
@@ -360,6 +360,39 @@ export default function Home() {
               </div>
             </div>
 
+            <div className="group border-t border-gray-900 pt-5 hover:border-gray-700 transition-colors">
+              <div className="flex flex-col gap-4 md:flex-row md:items-start">
+                <img
+                  src="/hearth.jpeg"
+                  alt="hearth website screenshot"
+                  className="h-20 w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100"
+                />
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors">
+                      hearth.
+                    </h3>
+                    <span className="text-xs font-mono text-gray-400">
+                      next.js / typescript / tailwind / fastapi / gemini api
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-500 max-w-xl">
+                    real estate listing analyzer which fixes accessibility issues by generating renovation visualizations & cost estimates.
+                  </p>
+                  <div className="flex gap-4 pt-1 text-xs font-mono">
+                    <a
+                      href="https://github.com/mqnch/chess-ai"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-gray-500 hover:text-gray-200 underline-offset-4 hover:underline"
+                    >
+                      source
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <div className="group border-t border-gray-900 pt-5 hover:border-gray-700 transition-colors">
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
                 <img
