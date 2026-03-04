@@ -256,8 +256,11 @@ export default function Home() {
       }
       projects={
         <section className="w-full space-y-6 font-mono text-sm text-gray-400 pb-20 md:pb-0">
-          <div className="space-y-3">
-            <div className="group border-t border-gray-900 pt-5 hover:border-gray-700 transition-colors">
+          <div className="space-y-6">
+            <div 
+              onClick={() => window.open("https://www.getajobchud.com", "_blank")}
+              className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
+            >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
                 <img
                   src="/jobmaxxing.png"
@@ -281,6 +284,7 @@ export default function Home() {
                       href="https://www.getajobchud.com"
                       target="_blank"
                       rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="text-gray-400 hover:text-gray-200 underline-offset-4 hover:underline"
                     >
                       live site
@@ -289,6 +293,7 @@ export default function Home() {
                       href="https://github.com/mqnch/jobmaxxing"
                       target="_blank"
                       rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="text-gray-500 hover:text-gray-200 underline-offset-4 hover:underline"
                     >
                       source
@@ -298,7 +303,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group border-t border-gray-900 pt-5 hover:border-gray-700 transition-colors">
+            <div 
+              onClick={() => window.open("https://github.com/mqnch/Cumo", "_blank")}
+              className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
+            >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
                 <img
                   src="/cumo.png"
@@ -322,6 +330,7 @@ export default function Home() {
                       href="https://github.com/mqnch/Cumo"
                       target="_blank"
                       rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="text-gray-500 hover:text-gray-200 underline-offset-4 hover:underline"
                     >
                       source
@@ -331,7 +340,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group border-t border-gray-900 pt-5 hover:border-gray-700 transition-colors">
+            <div 
+              onClick={() => window.open("https://github.com/mqnch/chess-ai", "_blank")}
+              className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
+            >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
                 <img
                   src="/chess.png"
@@ -356,6 +368,7 @@ export default function Home() {
                       href="https://github.com/mqnch/chess-ai"
                       target="_blank"
                       rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="text-gray-500 hover:text-gray-200 underline-offset-4 hover:underline"
                     >
                       source
@@ -365,7 +378,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group border-t border-gray-900 pt-5 hover:border-gray-700 transition-colors">
+            <div 
+              onClick={() => window.open("https://github.com/mqnch/hearth.", "_blank")}
+              className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
+            >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
                 <img
                   src="/hearth.jpeg"
@@ -386,9 +402,10 @@ export default function Home() {
                   </p>
                   <div className="flex gap-4 pt-1 text-xs font-mono">
                     <a
-                      href="https://github.com/mqnch/chess-ai"
+                      href="https://github.com/mqnch/hearth."
                       target="_blank"
                       rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="text-gray-500 hover:text-gray-200 underline-offset-4 hover:underline"
                     >
                       source
@@ -398,7 +415,10 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="group border-t border-gray-900 pt-5 hover:border-gray-700 transition-colors">
+            <div 
+              onClick={() => window.open("https://github.com/mqnch/event-date-time-nlp", "_blank")}
+              className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
+            >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
                 <img
                   src="/datenlp.png"
@@ -423,6 +443,7 @@ export default function Home() {
                       href="https://github.com/mqnch/event-date-time-nlp"
                       target="_blank"
                       rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="text-gray-500 hover:text-gray-200 underline-offset-4 hover:underline"
                     >
                       source
@@ -432,7 +453,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group border-t border-gray-900 pt-5 hover:border-gray-700 transition-colors">
+            <div 
+              onClick={() => window.open("https://github.com/mqnch/numpy-mnist-nn", "_blank")}
+              className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
+            >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
                 <img
                   src="/mnist.png"
@@ -457,6 +481,7 @@ export default function Home() {
                       href="https://github.com/mqnch/numpy-mnist-nn"
                       target="_blank"
                       rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="text-gray-500 hover:text-gray-200 underline-offset-4 hover:underline"
                     >
                       source
