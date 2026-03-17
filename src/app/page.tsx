@@ -8,16 +8,22 @@ export default function Home() {
       about={
         <section className="w-full space-y-5 font-mono text-sm text-gray-400">
           <div className="border-t border-gray-900 pt-1 space-y-1"></div>
-          <div className="flex items-baseline justify-between gap-6">
+          <div className="flex items-center gap-2">
+            <p className="text-gray-500 shrink-0 whitespace-nowrap">math @</p>
             <div className="flex items-center gap-2">
-              <p>math @</p>
               <img
                 src="/uwaterloo.svg"
                 alt="University of Waterloo logo"
-                className="h-4 w-4 rounded-sm"
+                className="h-4 w-4 rounded-sm shrink-0"
                 style={{ opacity: 0.85 }}
               />
-              <p>uwaterloo — applied math & machine learning</p>
+              <div className="flex flex-col md:flex-row md:items-baseline md:gap-2 leading-snug">
+                <p className="text-gray-400">uwaterloo</p>
+                <p className="text-gray-500 text-xs md:text-sm">
+                  <span className="hidden md:inline">— </span>
+                  applied math & machine learning
+                </p>
+              </div>
             </div>
           </div>
 

@@ -300,7 +300,7 @@ const Flow: React.FC = () => {
         ref={canvasRef}
         style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }}
       />
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 group/btn">
+      <div className="hidden md:flex fixed bottom-6 right-6 z-50 flex-col items-end gap-2 group/btn">
         <img 
           src="/trythis.png" 
           alt="Hint to interact with particles" 
