@@ -23,7 +23,7 @@ export default function Home() {
 
           <div className="border-t border-gray-900 pt-3 space-y-1">
             <p className="text-[0.7rem] uppercase tracking-[0.2em] text-gray-600">
-              projects
+              highlighted projects
             </p>
 
             <div className="flex items-baseline justify-between gap-6">
@@ -41,23 +41,25 @@ export default function Home() {
                   — internship index + application tracker
                 </span>
               </a>
+              <span className="text-xs text-gray-600">web</span>
             </div>
 
             <div className="flex items-baseline justify-between gap-6">
               <a
-                href="https://github.com/mqnch/hearth."
+                href="https://github.com/mqnch/loan-prediction-model"
                 target="_blank"
                 rel="noreferrer"
                 className="underline-offset-4 hover:underline"
               >
                 <span className="text-gray-400">
-                  ↳ hearth.
+                  ↳ loan prediction model
                 </span>
                 <span className="text-gray-500">
                   {' '}
-                  — house listing analyzer + renovation visualizer
+                  — loan defaults cox survival model
                 </span>
               </a>
+              <span className="text-xs text-gray-600">ml</span>
             </div>
 
             <div className="flex items-baseline justify-between gap-6">
@@ -75,6 +77,25 @@ export default function Home() {
                   — alphazero-like mcts + self-play
                 </span>
               </a>
+              <span className="text-xs text-gray-600">rl</span>
+            </div>
+
+            <div className="flex items-baseline justify-between gap-6">
+              <a
+                href="https://github.com/mqnch/hearth."
+                target="_blank"
+                rel="noreferrer"
+                className="underline-offset-4 hover:underline"
+              >
+                <span className="text-gray-400">
+                  ↳ hearth.
+                </span>
+                <span className="text-gray-500">
+                  {' '}
+                  — house listing analyzer + renovation visualizer
+                </span>
+              </a>
+              <span className="text-xs text-gray-600">web</span>
             </div>
 
             <div className="flex items-baseline justify-between gap-6">
@@ -92,23 +113,7 @@ export default function Home() {
                   — converts natural text into json
                 </span>
               </a>
-            </div>
-
-            <div className="flex items-baseline justify-between gap-6">
-              <a
-                href="https://github.com/mqnch/numpy-mnist-nn"
-                target="_blank"
-                rel="noreferrer"
-                className="underline-offset-4 hover:underline"
-              >
-                <span className="text-gray-400">
-                  ↳ mnist neural network
-                </span>
-                <span className="text-gray-500">
-                  {' '}
-                  — built from scratch using lin. alg
-                </span>
-              </a>
+              <span className="text-xs text-gray-600">nlp</span>
             </div>
           </div>
 
@@ -277,7 +282,7 @@ export default function Home() {
                     </span>
                   </div>
                   <p className="text-sm text-gray-500 max-w-xl">
-                    aggregates internships from SimplifyJobs and helps you track your applications.
+                    10+ daily users. aggregates internships from SimplifyJobs and helps you track your applications.
                   </p>
                   <div className="flex gap-4 pt-1 text-xs font-mono">
                     <a
@@ -328,6 +333,43 @@ export default function Home() {
                   <div className="flex gap-4 pt-1 text-xs font-mono">
                     <a
                       href="https://github.com/mqnch/Cumo"
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-gray-500 hover:text-gray-200 underline-offset-4 hover:underline"
+                    >
+                      source
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div 
+              onClick={() => window.open("https://github.com/mqnch/loan-prediction-model", "_blank")}
+              className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
+            >
+              <div className="flex flex-col gap-4 md:flex-row md:items-start">
+                <img
+                  src="/loan_model_shap_plot.png"
+                  alt="Loan prediction ML model presentation"
+                  className="h-20 w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100"
+                />
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors">
+                      loan prediction model
+                    </h3>
+                    <span className="text-xs font-mono text-gray-400">
+                      xgboost / scikit-learn / pandas / shap
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-500 max-w-xl">
+                    end-to-end ml pipeline predicting loan default risk using a cox survival model with proxies and fairness analysis.
+                  </p>
+                  <div className="flex gap-4 pt-1 text-xs font-mono">
+                    <a
+                      href="https://github.com/mqnch/loan-prediction-model"
                       target="_blank"
                       rel="noreferrer"
                       onClick={(e) => e.stopPropagation()}
@@ -452,6 +494,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
 
             <div 
               onClick={() => window.open("https://github.com/mqnch/numpy-mnist-nn", "_blank")}
