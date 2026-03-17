@@ -10,6 +10,9 @@ const Flow: React.FC = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    const explodeButton = document.getElementById('flow-explode-btn');
+    let isExplosionHeld = false;
+
     let animationFrameId: number;
     let particles: Particle[] = [];
     const mouse = { x: -1000, y: -1000 };
@@ -169,6 +172,35 @@ const Flow: React.FC = () => {
       orbitalState = null;
     };
 
+    const triggerExplosion = () => {
+      // Use mouse position if it's on screen, otherwise use center of window
+      const ex = mouse.x > -500 ? mouse.x : window.innerWidth / 2;
+      const ey = mouse.y > -500 ? mouse.y : window.innerHeight / 2;
+      
+      particles.forEach(p => {
+        const dx = p.x - ex;
+        const dy = p.y - ey;
+        const distSq = dx * dx + dy * dy;
+        const dist = Math.sqrt(distSq) || 1;
+        
+        // Powerful outward impulse
+        // Reduced power slightly for continuous mode but still punchy
+        const power = isExplosionHeld ? 1.5 : 25;
+        p.vx += (dx / dist) * power;
+        p.vy += (dy / dist) * power;
+      });
+    };
+
+    const handleExplodeDown = (e: Event) => {
+      e.preventDefault();
+      isExplosionHeld = true;
+      triggerExplosion(); // Initial punch
+    };
+
+    const handleExplodeUp = () => {
+      isExplosionHeld = false;
+    };
+
     const handleTouchMove = (e: TouchEvent) => {
       const touch = e.touches?.[0];
       if (touch) {
@@ -206,6 +238,9 @@ const Flow: React.FC = () => {
 
       // 1. UPDATE PHYSICS (Runs as many times as needed to catch up to 144Hz)
       while (accumulator >= SIMULATION_STEP) {
+        if (isExplosionHeld) {
+          triggerExplosion();
+        }
         particles.forEach(p => {
           p.update(window.innerWidth, window.innerHeight, FIXED_DT);
         });
@@ -230,9 +265,14 @@ const Flow: React.FC = () => {
     window.addEventListener("mousedown", handleMouseDown);
     window.addEventListener("mouseup", handleMouseUp);
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("touchstart", handleTouchStart, { passive: true });
     window.addEventListener("touchend", handleTouchEnd, { passive: true });
     window.addEventListener("touchmove", handleTouchMove, { passive: true });
+    
+    // Hold handling
+    explodeButton?.addEventListener("mousedown", handleExplodeDown);
+    window.addEventListener("mouseup", handleExplodeUp);
+    explodeButton?.addEventListener("touchstart", handleExplodeDown, { passive: false });
+    window.addEventListener("touchend", handleExplodeUp);
 
     init();
     requestAnimationFrame(animate);
@@ -245,15 +285,47 @@ const Flow: React.FC = () => {
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchend", handleTouchEnd);
       window.removeEventListener("touchmove", handleTouchMove);
+      
+      explodeButton?.removeEventListener("mousedown", handleExplodeDown);
+      window.removeEventListener("mouseup", handleExplodeUp);
+      explodeButton?.removeEventListener("touchstart", handleExplodeDown);
+      window.removeEventListener("touchend", handleExplodeUp);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }}
-    />
+    <>
+      <canvas
+        ref={canvasRef}
+        style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }}
+      />
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 group/btn">
+        <img 
+          src="/trythis.png" 
+          alt="Hint to interact with particles" 
+          className="hidden md:block w-32 opacity-80 select-none pointer-events-none mb-1 mr-6"
+        />
+        <button
+          id="flow-explode-btn"
+          className="p-2 md:p-3 rounded-full border border-gray-800 bg-black/20 hover:bg-black/40 text-gray-700 hover:text-gray-400 transition-all duration-300 backdrop-blur-sm group select-none touch-none scale-90 hover:scale-100"
+          aria-label="Trigger particle explosion"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            className="h-4 w-4 md:h-5 md:w-5 transition-transform group-active:scale-125"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path
+              d="M12 3v3m0 12v3M5.636 5.636l2.122 2.122m8.484 8.484l2.122 2.122M3 12h3m12 0h3M5.636 18.364l2.122-2.122m8.484-8.484l2.122-2.122"
+              strokeLinecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </>
   );
 };
 
