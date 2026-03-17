@@ -304,7 +304,7 @@ const Flow: React.FC = () => {
         <img 
           src="/trythis.png" 
           alt="Hint to interact with particles" 
-          className="hidden md:block w-32 opacity-80 select-none pointer-events-none mb-1 mr-6"
+          className="hidden md:block w-32 opacity-60 select-none pointer-events-none mb-1 mr-6"
         />
         <button
           id="flow-explode-btn"
