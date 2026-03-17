@@ -267,17 +267,27 @@ export default function Home() {
               className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
-                <img
-                  src="/jobmaxxing.png"
-                  alt="Screenshot of getajobchud.com internship tracker"
-                  className="h-20 w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100"
-                />
-                <div className="flex-1 space-y-1">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors">
+                <div className="flex gap-4 md:contents">
+                  <img
+                    src="/jobmaxxing.png"
+                    alt="Screenshot of getajobchud.com internship tracker"
+                    className="h-16 w-24 md:h-20 md:w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100 shrink-0"
+                  />
+                  <div className="flex flex-col gap-1.5 md:hidden">
+                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors leading-tight">
                       getajobchud.com
                     </h3>
-                    <span className="text-xs font-mono text-gray-400">
+                    <span className="text-[0.65rem] font-mono text-gray-400 tracking-wider">
+                      next.js / ts / tailwind / supabase
+                    </span>
+                  </div>
+                </div>
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="hidden md:block text-lg font-medium group-hover:text-blue-400 transition-colors">
+                      getajobchud.com
+                    </h3>
+                    <span className="hidden md:block text-xs font-mono text-gray-400">
                       next.js / typescript / tailwind / supabase
                     </span>
                   </div>
@@ -313,17 +323,27 @@ export default function Home() {
               className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
-                <img
-                  src="/cumo.png"
-                  alt="Cumo command bar screenshot"
-                  className="h-20 w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100"
-                />
-                <div className="flex-1 space-y-1">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors">
+                <div className="flex gap-4 md:contents">
+                  <img
+                    src="/cumo.png"
+                    alt="Cumo command bar screenshot"
+                    className="h-16 w-24 md:h-20 md:w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100 shrink-0"
+                  />
+                  <div className="flex flex-col gap-1.5 md:hidden">
+                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors leading-tight">
                       Cumo
                     </h3>
-                    <span className="text-xs font-mono text-gray-400">
+                    <span className="text-[0.65rem] font-mono text-gray-400 tracking-wider">
+                      electron / ts / tailwind / flask
+                    </span>
+                  </div>
+                </div>
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="hidden md:block text-lg font-medium group-hover:text-blue-400 transition-colors">
+                      Cumo
+                    </h3>
+                    <span className="hidden md:block text-xs font-mono text-gray-400">
                       electron / typescript / tailwind / flask / huey / google oauth
                     </span>
                   </div>
@@ -350,17 +370,27 @@ export default function Home() {
               className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
-                <img
-                  src="/loan_model_shap_plot.png"
-                  alt="Loan prediction ML model presentation"
-                  className="h-20 w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100"
-                />
-                <div className="flex-1 space-y-1">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors">
+                <div className="flex gap-4 md:contents">
+                  <img
+                    src="/loan_model_shap_plot.png"
+                    alt="Loan prediction ML model presentation"
+                    className="h-16 w-24 md:h-20 md:w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100 shrink-0"
+                  />
+                  <div className="flex flex-col gap-1.5 md:hidden">
+                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors leading-tight">
                       loan prediction model
                     </h3>
-                    <span className="text-xs font-mono text-gray-400">
+                    <span className="text-[0.65rem] font-mono text-gray-400 tracking-wider">
+                      xgboost / sklearn / pandas / shap
+                    </span>
+                  </div>
+                </div>
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="hidden md:block text-lg font-medium group-hover:text-blue-400 transition-colors">
+                      loan prediction model
+                    </h3>
+                    <span className="hidden md:block text-xs font-mono text-gray-400">
                       xgboost / scikit-learn / pandas / shap
                     </span>
                   </div>
@@ -387,17 +417,27 @@ export default function Home() {
               className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
-                <img
-                  src="/chess.png"
-                  alt="Self-learning chess AI training visualization"
-                  className="h-20 w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100"
-                />
-                <div className="flex-1 space-y-1">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors">
+                <div className="flex gap-4 md:contents">
+                  <img
+                    src="/chess.png"
+                    alt="Self-learning chess AI training visualization"
+                    className="h-16 w-24 md:h-20 md:w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100 shrink-0"
+                  />
+                  <div className="flex flex-col gap-1.5 md:hidden">
+                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors leading-tight">
                       self-learning chess ai
                     </h3>
-                    <span className="text-xs font-mono text-gray-400">
+                    <span className="text-[0.65rem] font-mono text-gray-400 tracking-wider">
+                      pytorch / pandas / cuda
+                    </span>
+                  </div>
+                </div>
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="hidden md:block text-lg font-medium group-hover:text-blue-400 transition-colors">
+                      self-learning chess ai
+                    </h3>
+                    <span className="hidden md:block text-xs font-mono text-gray-400">
                       pytorch / pandas / cuda
                     </span>
                   </div>
@@ -425,17 +465,27 @@ export default function Home() {
               className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
-                <img
-                  src="/hearth.jpeg"
-                  alt="hearth website screenshot"
-                  className="h-20 w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100"
-                />
-                <div className="flex-1 space-y-1">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors">
+                <div className="flex gap-4 md:contents">
+                  <img
+                    src="/hearth.jpeg"
+                    alt="hearth website screenshot"
+                    className="h-16 w-24 md:h-20 md:w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100 shrink-0"
+                  />
+                  <div className="flex flex-col gap-1.5 md:hidden">
+                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors leading-tight">
                       hearth.
                     </h3>
-                    <span className="text-xs font-mono text-gray-400">
+                    <span className="text-[0.65rem] font-mono text-gray-400 tracking-wider">
+                      next.js / ts / tailwind / fastapi
+                    </span>
+                  </div>
+                </div>
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="hidden md:block text-lg font-medium group-hover:text-blue-400 transition-colors">
+                      hearth.
+                    </h3>
+                    <span className="hidden md:block text-xs font-mono text-gray-400">
                       next.js / typescript / tailwind / fastapi / gemini api
                     </span>
                   </div>
@@ -462,17 +512,27 @@ export default function Home() {
               className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
-                <img
-                  src="/datenlp.png"
-                  alt="Event-date-time natural language parser interface"
-                  className="h-20 w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100"
-                />
-                <div className="flex-1 space-y-1">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors">
+                <div className="flex gap-4 md:contents">
+                  <img
+                    src="/datenlp.png"
+                    alt="Event-date-time natural language parser interface"
+                    className="h-16 w-24 md:h-20 md:w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100 shrink-0"
+                  />
+                  <div className="flex flex-col gap-1.5 md:hidden">
+                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors leading-tight">
                       event-date-time nlp
                     </h3>
-                    <span className="text-xs font-mono text-gray-400">
+                    <span className="text-[0.65rem] font-mono text-gray-400 tracking-wider">
+                      python / flask / spacy
+                    </span>
+                  </div>
+                </div>
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="hidden md:block text-lg font-medium group-hover:text-blue-400 transition-colors">
+                      event-date-time nlp
+                    </h3>
+                    <span className="hidden md:block text-xs font-mono text-gray-400">
                       python / flask / spacy / dateparser
                     </span>
                   </div>
@@ -501,17 +561,27 @@ export default function Home() {
               className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
-                <img
-                  src="/mnist.png"
-                  alt="MNIST neural network training metrics"
-                  className="h-20 w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100"
-                />
-                <div className="flex-1 space-y-1">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors">
+                <div className="flex gap-4 md:contents">
+                  <img
+                    src="/mnist.png"
+                    alt="MNIST neural network training metrics"
+                    className="h-16 w-24 md:h-20 md:w-32 rounded-md border border-gray-800 object-cover opacity-80 transition-opacity group-hover:opacity-100 shrink-0"
+                  />
+                  <div className="flex flex-col gap-1.5 md:hidden">
+                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors leading-tight">
                       mnist neural network
                     </h3>
-                    <span className="text-xs font-mono text-gray-400">
+                    <span className="text-[0.65rem] font-mono text-gray-400 tracking-wider">
+                      python / numpy
+                    </span>
+                  </div>
+                </div>
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="hidden md:block text-lg font-medium group-hover:text-blue-400 transition-colors">
+                      mnist neural network
+                    </h3>
+                    <span className="hidden md:block text-xs font-mono text-gray-400">
                       python / numpy
                     </span>
                   </div>
