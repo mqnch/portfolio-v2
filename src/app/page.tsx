@@ -130,7 +130,7 @@ export default function Home() {
 
             <div className="flex items-baseline justify-between gap-6">
               <a
-                href="https://github.com/mqnch/Cumo"
+                href="https://trycumo.com"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 underline-offset-4 hover:underline"
@@ -144,7 +144,26 @@ export default function Home() {
                 />
                 <p>Cumo — co-founder & lead software developer</p>
               </a>
-              <span className="text-xs text-gray-600">2025</span>
+              <span className="text-xs text-gray-600">2025—2026</span>
+            </div>
+
+            <div className="flex items-baseline justify-between gap-6">
+              <a
+                href="https://www.watonomous.ca"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 underline-offset-4 hover:underline"
+              >
+                <p>↳</p>
+                <img
+                  src="/wato.png"
+                  alt="WATonomous logo"
+                  className="h-4 w-4 rounded-sm"
+                  style={{ opacity: 0.85 }}
+                />
+                <p>WATonomous — software engineer</p>
+              </a>
+              <span className="text-xs text-gray-600">2025—2026</span>
             </div>
 
             <div className="flex items-baseline justify-between gap-6">
@@ -325,7 +344,7 @@ export default function Home() {
             </div>
 
             <div 
-              onClick={() => window.open("https://github.com/mqnch/Cumo", "_blank")}
+              onClick={() => window.open("https://trycumo.com", "_blank")}
               className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
@@ -357,6 +376,15 @@ export default function Home() {
                     always-on command bar that instantly turns natural language into scheduled events.
                   </p>
                   <div className="flex gap-4 pt-1 text-xs font-mono">
+                    <a
+                      href="https://trycumo.com"
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-gray-400 hover:text-gray-200 underline-offset-4 hover:underline"
+                    >
+                      landing page
+                    </a>
                     <a
                       href="https://github.com/mqnch/Cumo"
                       target="_blank"
