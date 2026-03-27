@@ -21,7 +21,7 @@ export default function Home() {
                 <p className="text-gray-400">uwaterloo</p>
                 <p className="text-gray-500 text-xs md:text-sm">
                   <span className="hidden md:inline">— </span>
-                  applied math & machine learning
+                  data science major
                 </p>
               </div>
             </div>
