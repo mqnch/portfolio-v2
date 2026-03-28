@@ -317,7 +317,7 @@ export default function Home() {
                     </span>
                   </div>
                   <p className="text-sm text-gray-500 max-w-xl">
-                    10+ daily users. aggregates internships from SimplifyJobs and helps you track your applications.
+                    100+ users! scrapes internships from SimplifyJobs and helps you track your applications.
                   </p>
                   <div className="flex gap-4 pt-1 text-xs font-mono">
                     <a
