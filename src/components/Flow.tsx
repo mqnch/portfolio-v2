@@ -301,11 +301,11 @@ const Flow: React.FC = () => {
         style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }}
       />
       <div className="hidden md:flex fixed bottom-6 right-6 z-50 flex-col items-end gap-2 group/btn">
-        <img 
+        {/* <img 
           src="/trythis.png" 
           alt="Hint to interact with particles" 
           className="hidden md:block w-32 opacity-60 select-none pointer-events-none mb-1 mr-6"
-        />
+        /> */}
         <button
           id="flow-explode-btn"
           className="p-2 md:p-3 rounded-full border border-gray-800 bg-black/20 hover:bg-black/40 text-gray-700 hover:text-gray-400 transition-all duration-300 backdrop-blur-sm group select-none touch-none scale-90 hover:scale-100"
