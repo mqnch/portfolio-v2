@@ -644,7 +644,7 @@ export default function Home() {
         <section className="w-full space-y-4">
           <div className="border-t border-gray-900 pt-1 space-y-1"></div>
           <p className="text-sm text-gray-600 font-mono">
-            tbd...
+            coming soon...
           </p>
         </section>
       }
