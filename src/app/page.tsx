@@ -29,6 +29,92 @@ export default function Home() {
 
           <div className="border-t border-gray-900 pt-3 space-y-1">
             <p className="text-[0.7rem] uppercase tracking-[0.2em] text-gray-600">
+              experience
+            </p>
+            
+            <div className="flex items-baseline justify-between gap-6">
+              <div className="flex items-center gap-2">
+                <p>↳</p>
+                <img
+                  src="/mtxt.png"
+                  alt="mtxt logo"
+                  className="h-4 w-4 rounded-sm"
+                  style={{ opacity: 0.85 }}
+                />
+                <p>??? — software engineer intern</p>
+              </div>
+              <span className="text-xs text-gray-600">2026</span>
+            </div>
+
+            <div className="flex items-baseline justify-between gap-6">
+              <a
+                href="https://trycumo.com"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 underline-offset-4 hover:underline"
+              >
+                <p>↳</p>
+                <img
+                  src="/cumo.svg"
+                  alt="Cumo logo"
+                  className="h-4 w-4 rounded-sm"
+                  style={{ opacity: 0.85 }}
+                />
+                <p>Cumo — co-founder & lead software developer</p>
+              </a>
+              <span className="text-xs text-gray-600">2025—2026</span>
+            </div>
+
+            <div className="flex items-baseline justify-between gap-6">
+              <a
+                href="https://www.watonomous.ca"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 underline-offset-4 hover:underline"
+              >
+                <p>↳</p>
+                <img
+                  src="/wato.png"
+                  alt="WATonomous logo"
+                  className="h-4 w-4 rounded-sm"
+                  style={{ opacity: 0.85 }}
+                />
+                <p>WATonomous — software engineer</p>
+              </a>
+              <span className="text-xs text-gray-600">2025—2026</span>
+            </div>
+
+            <div className="flex items-baseline justify-between gap-6">
+              <div className="flex items-center gap-2">
+                <p>↳</p>
+                <img
+                  src="/weglobal.png"
+                  alt="W.E Global logo"
+                  className="h-4 w-4 rounded-sm"
+                  style={{ opacity: 0.85 }}
+                />
+                <p>W.E Global — robotics instructor</p>
+              </div>
+              <span className="text-xs text-gray-600">2025</span>
+            </div>
+
+            <div className="flex items-baseline justify-between gap-6">
+              <div className="flex items-center gap-2">
+                <p>↳</p>
+                <img
+                  src="/vex.png"
+                  alt="VEX Robotics logo"
+                  className="h-4 w-4 rounded-sm"
+                  style={{ opacity: 0.85 }}
+                />
+                <p>VEX Robotics — team lead</p>
+              </div>
+              <span className="text-xs text-gray-600">2021—2025</span>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-900 pt-3 space-y-1">
+            <p className="text-[0.7rem] uppercase tracking-[0.2em] text-gray-600">
               highlighted projects
             </p>
 
@@ -120,78 +206,6 @@ export default function Home() {
                 </span>
               </a>
               <span className="text-xs text-gray-600">nlp</span>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-900 pt-3 space-y-1">
-            <p className="text-[0.7rem] uppercase tracking-[0.2em] text-gray-600">
-              experience
-            </p>
-
-            <div className="flex items-baseline justify-between gap-6">
-              <a
-                href="https://trycumo.com"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 underline-offset-4 hover:underline"
-              >
-                <p>↳</p>
-                <img
-                  src="/cumo.svg"
-                  alt="Cumo logo"
-                  className="h-4 w-4 rounded-sm"
-                  style={{ opacity: 0.85 }}
-                />
-                <p>Cumo — co-founder & lead software developer</p>
-              </a>
-              <span className="text-xs text-gray-600">2025—2026</span>
-            </div>
-
-            <div className="flex items-baseline justify-between gap-6">
-              <a
-                href="https://www.watonomous.ca"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 underline-offset-4 hover:underline"
-              >
-                <p>↳</p>
-                <img
-                  src="/wato.png"
-                  alt="WATonomous logo"
-                  className="h-4 w-4 rounded-sm"
-                  style={{ opacity: 0.85 }}
-                />
-                <p>WATonomous — software engineer</p>
-              </a>
-              <span className="text-xs text-gray-600">2025—2026</span>
-            </div>
-
-            <div className="flex items-baseline justify-between gap-6">
-              <div className="flex items-center gap-2">
-                <p>↳</p>
-                <img
-                  src="/weglobal.png"
-                  alt="W.E Global logo"
-                  className="h-4 w-4 rounded-sm"
-                  style={{ opacity: 0.85 }}
-                />
-                <p>W.E Global — robotics instructor</p>
-              </div>
-              <span className="text-xs text-gray-600">2025</span>
-            </div>
-
-            <div className="flex items-baseline justify-between gap-6">
-              <div className="flex items-center gap-2">
-                <p>↳</p>
-                <img
-                  src="/vex.png"
-                  alt="VEX Robotics logo"
-                  className="h-4 w-4 rounded-sm"
-                  style={{ opacity: 0.85 }}
-                />
-                <p>VEX Robotics — team lead</p>
-              </div>
-              <span className="text-xs text-gray-600">2021—2025</span>
             </div>
           </div>
           <div className="border-t border-gray-900 pt-3">
