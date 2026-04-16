@@ -66,7 +66,7 @@ export default function PageTabs({ about, projects, writing }: PageTabsProps) {
   }, [activeTab]);
 
   return (
-    <main className="relative min-h-screen w-full flex flex-col items-center justify-start text-white px-4 pt-8 pb-10 md:px-8 md:pt-36 lg:pt-48">
+    <main className="relative min-h-screen w-full flex flex-col items-center justify-start text-white px-4 pt-8 pb-10 md:px-8 md:pt-24 lg:pt-28">
       <div className="max-w-2xl w-full space-y-8">
         <nav
           className="flex items-center justify-between text-xs font-mono text-gray-500 tracking-[0.15em] uppercase"
@@ -114,7 +114,7 @@ export default function PageTabs({ about, projects, writing }: PageTabsProps) {
             aria-labelledby={activeTab}
             className={`transition-opacity duration-150 ${
               activeTab === 'projects' 
-                ? 'overflow-y-auto max-h-[calc(100vh-10rem)] md:max-h-[calc(100vh-26rem)] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]' 
+                ? 'overflow-y-auto max-h-[calc(100vh-10rem)] md:max-h-[calc(100vh-20rem)] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]' 
                 : ''
             }`}
           >
