@@ -65,7 +65,7 @@ export default function Home() {
                   className="h-4 w-4 rounded-sm"
                   style={{ opacity: 0.85 }}
                 />
-                <p>Cumo — co-founder & lead software developer</p>
+                <p>Cumo — software engineer</p>
               </a>
               <span className="text-xs text-gray-600">2025—2026</span>
             </div>
@@ -195,7 +195,7 @@ export default function Home() {
               <span className="text-xs text-gray-600">web</span>
             </div>
 
-            <div className="flex items-baseline justify-between gap-6">
+            {/* <div className="flex items-baseline justify-between gap-6">
               <a
                 href="https://github.com/mqnch/event-date-time-nlp"
                 target="_blank"
@@ -211,7 +211,7 @@ export default function Home() {
                 </span>
               </a>
               <span className="text-xs text-gray-600">nlp</span>
-            </div>
+            </div> */}
           </div>
           <div className="border-t border-gray-900 pt-3">
             <div className="flex items-center justify-between">
@@ -560,7 +560,7 @@ export default function Home() {
               </div>
             </div>
             
-            <div 
+            {/* <div 
               onClick={() => window.open("https://github.com/mqnch/event-date-time-nlp", "_blank")}
               className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
             >
@@ -655,7 +655,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       }
