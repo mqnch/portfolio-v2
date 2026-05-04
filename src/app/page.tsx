@@ -9,7 +9,7 @@ export default function Home() {
         <section className="w-full space-y-5 font-mono text-sm text-gray-400">
           <div className="border-t border-gray-900 pt-1 space-y-1"></div>
           <div className="flex items-center gap-2">
-            <p className="text-gray-500 shrink-0 whitespace-nowrap">math @</p>
+            <p className="text-gray-500 shrink-0 whitespace-nowrap">cs @</p>
             <div className="flex items-center gap-2">
               <img
                 src="/uwaterloo.svg"
@@ -20,8 +20,7 @@ export default function Home() {
               <div className="flex flex-col md:flex-row md:items-baseline md:gap-2 leading-snug">
                 <p className="text-gray-400">uwaterloo</p>
                 <p className="text-gray-500 text-xs md:text-sm">
-                  <span className="hidden md:inline">— </span>
-                  majoring in data science
+                  <span className="hidden md:inline"></span>
                 </p>
               </div>
             </div>
