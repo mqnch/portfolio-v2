@@ -126,7 +126,7 @@ export default function MinimalOverlayScrollbar({
 
   return (
     <div
-      className="pointer-events-none absolute inset-y-0 right-0 z-10 flex w-3 justify-center"
+      className="pointer-events-none absolute inset-y-0 right-0 z-10 flex w-3 justify-center max-md:-right-4"
       aria-hidden
     >
       <div

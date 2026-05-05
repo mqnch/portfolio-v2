@@ -93,20 +93,6 @@ export default function HomeClient({
                 />
                 <p>WATonomous — software engineer</p>
               </a>
-              <span className="text-xs text-gray-600">2025—2026</span>
-            </div>
-
-            <div className="flex items-baseline justify-between gap-6">
-              <div className="flex items-center gap-2">
-                <p>↳</p>
-                <img
-                  src="/weglobal.png"
-                  alt="W.E Global logo"
-                  className="h-4 w-4 rounded-sm"
-                  style={{ opacity: 0.85 }}
-                />
-                <p>W.E Global — robotics instructor</p>
-              </div>
               <span className="text-xs text-gray-600">2025</span>
             </div>
 
