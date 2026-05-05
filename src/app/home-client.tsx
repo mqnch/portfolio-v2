@@ -125,6 +125,24 @@ export default function HomeClient({ writingPosts }: { writingPosts: PostMeta[] 
 
             <div className="flex items-baseline justify-between gap-6">
               <a
+                href="https://github.com/mqnch/spotify--"
+                target="_blank"
+                rel="noreferrer"
+                className="underline-offset-4 hover:underline"
+              >
+                <span className="text-gray-400">
+                  ↳ spotify--
+                </span>
+                <span className="text-gray-500">
+                  {' '}
+                  — lightweight spotify client w/ listening data
+                </span>
+              </a>
+              <span className="text-xs text-gray-600">rust</span>
+            </div>
+
+            <div className="flex items-baseline justify-between gap-6">
+              <a
                 href="https://www.getajobchud.com"
                 target="_blank"
                 rel="noreferrer"
@@ -306,6 +324,56 @@ export default function HomeClient({ writingPosts }: { writingPosts: PostMeta[] 
       projects={
         <section className="w-full space-y-6 font-mono text-sm text-gray-400 pb-20 md:pb-0">
           <div className="space-y-6">
+            <div
+              onClick={() =>
+                window.open('https://github.com/mqnch/spotify--', '_blank')
+              }
+              className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
+            >
+              <div className="flex flex-col gap-4 md:flex-row md:items-start">
+                <div className="flex gap-4 md:contents">
+                  <img
+                    src="/spotify--.png"
+                    alt="spotify-- desktop app screenshot"
+                    className="h-16 w-24 md:h-20 md:w-32 rounded-md border border-gray-800 object-cover object-left-top opacity-80 transition-opacity group-hover:opacity-100 shrink-0"
+                  />
+                  <div className="flex flex-col gap-1.5 md:hidden">
+                    <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors leading-tight">
+                      spotify--
+                    </h3>
+                    <span className="text-[0.65rem] font-mono text-gray-400 tracking-wider">
+                      rust / spotify api / last.fm
+                    </span>
+                  </div>
+                </div>
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="hidden md:block text-lg font-medium group-hover:text-blue-400 transition-colors">
+                      spotify-- [WIP]
+                    </h3>
+                    <span className="hidden md:block text-xs font-mono text-gray-400">
+                      rust / spotify web api / last.fm api
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-500 max-w-xl">
+                    native spotify client built in rust, smaller and faster than the
+                    official app, with listening history and stats.
+                  </p>
+                  <div className="flex gap-4 pt-1 text-xs font-mono">
+                    <a
+                      href="https://github.com/mqnch/spotify--"
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-gray-500 hover:text-gray-200 underline-offset-4 hover:underline"
+                    >
+                      source
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div 
               onClick={() => window.open("https://www.getajobchud.com", "_blank")}
               className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
