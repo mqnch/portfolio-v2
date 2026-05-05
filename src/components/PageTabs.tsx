@@ -20,7 +20,7 @@ const tabs: { id: TabId; label: string }[] = [
 ];
 
 const scrollPanelClass =
-  'scroll-smooth overflow-y-auto max-h-[calc(100vh-10rem)] md:max-h-[calc(100vh-20rem)] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]';
+  'scroll-smooth overscroll-y-contain overflow-y-auto max-h-[calc(100vh-10rem)] md:max-h-[calc(100vh-20rem)] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] [-webkit-overflow-scrolling:touch]';
 
 export default function PageTabs({
   about,
@@ -116,7 +116,7 @@ export default function PageTabs({
   }, [activeTab, writingSlug]);
 
   return (
-    <main className="relative min-h-screen w-full flex flex-col items-center justify-start text-white px-4 pt-8 pb-10 md:px-8 md:pt-24 lg:pt-28">
+    <main className="relative min-h-screen w-full flex flex-col items-center justify-start text-white px-4 pt-[max(2rem,env(safe-area-inset-top))] pb-10 md:px-8 md:pt-24 lg:pt-28">
       <div className="max-w-2xl w-full space-y-8">
         <nav
           className="flex items-center justify-between text-xs font-mono text-gray-500 tracking-[0.15em] uppercase"

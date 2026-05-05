@@ -1,6 +1,7 @@
 import type { MDXComponents } from "mdx/types";
 import Image from "next/image";
 import type { ComponentPropsWithoutRef } from "react";
+import { MdxHashLink } from "@/components/mdx-hash-link";
 
 function MdxImg({
   src,
@@ -47,12 +48,7 @@ export const mdxComponents: MDXComponents = {
   li: (props: ComponentPropsWithoutRef<"li">) => (
     <li className="font-mono leading-relaxed marker:text-gray-600" {...props} />
   ),
-  a: (props: ComponentPropsWithoutRef<"a">) => (
-    <a
-      className="font-mono text-gray-300 underline decoration-gray-600 underline-offset-4 hover:text-white hover:decoration-gray-400"
-      {...props}
-    />
-  ),
+  a: (props: ComponentPropsWithoutRef<"a">) => <MdxHashLink {...props} />,
   img: MdxImg,
   hr: () => <hr className="my-10 border-gray-900" />,
   blockquote: (props: ComponentPropsWithoutRef<"blockquote">) => (
