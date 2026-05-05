@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, ReactNode, useRef, useEffect } from 'react';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { PostMeta } from '@/types/writing';
 import WritingPostList from '@/components/WritingPostList';
 import WritingArticlePanel from '@/components/WritingArticlePanel';
@@ -11,6 +12,7 @@ type PageTabsProps = {
   about: ReactNode;
   projects: ReactNode;
   writingPosts: PostMeta[];
+  writingSerializedBySlug: Record<string, MDXRemoteSerializeResult>;
 };
 
 const tabs: { id: TabId; label: string }[] = [
@@ -26,6 +28,7 @@ export default function PageTabs({
   about,
   projects,
   writingPosts,
+  writingSerializedBySlug,
 }: PageTabsProps) {
   const [activeTab, setActiveTab] = useState<TabId>('about');
   const [writingSlug, setWritingSlug] = useState<string | null>(null);
@@ -60,12 +63,13 @@ export default function PageTabs({
       case 'writing': {
         if (writingSlug) {
           const post = writingPosts.find((p) => p.slug === writingSlug);
-          if (post) {
+          const serialized = writingSerializedBySlug[writingSlug];
+          if (post && serialized) {
             return (
               <WritingArticlePanel
-                slug={post.slug}
                 title={post.title}
                 date={post.date}
+                serialized={serialized}
               />
             );
           }

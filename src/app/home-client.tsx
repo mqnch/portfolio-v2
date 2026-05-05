@@ -1,9 +1,16 @@
 'use client';
 
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { PostMeta } from '@/types/writing';
 import PageTabs from '@/components/PageTabs';
 
-export default function HomeClient({ writingPosts }: { writingPosts: PostMeta[] }) {
+export default function HomeClient({
+  writingPosts,
+  writingSerializedBySlug,
+}: {
+  writingPosts: PostMeta[];
+  writingSerializedBySlug: Record<string, MDXRemoteSerializeResult>;
+}) {
   return (
     <PageTabs
       about={
@@ -728,6 +735,7 @@ export default function HomeClient({ writingPosts }: { writingPosts: PostMeta[] 
         </section>
       }
       writingPosts={writingPosts}
+      writingSerializedBySlug={writingSerializedBySlug}
     />
   );
 }

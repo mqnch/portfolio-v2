@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { MDXRemote, type MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { mdxComponents } from '@/components/mdx-article';
 
@@ -11,41 +10,16 @@ const dateFmt = new Intl.DateTimeFormat('en-US', {
 });
 
 type WritingArticlePanelProps = {
-  slug: string;
   title: string;
   date: string;
+  serialized: MDXRemoteSerializeResult;
 };
 
 export default function WritingArticlePanel({
-  slug,
   title,
   date,
+  serialized,
 }: WritingArticlePanelProps) {
-  const [source, setSource] = useState<MDXRemoteSerializeResult | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-    setSource(null);
-    setError(null);
-
-    fetch(`/api/writing/${encodeURIComponent(slug)}`)
-      .then((res) => {
-        if (!res.ok) throw new Error('Failed to load');
-        return res.json() as Promise<MDXRemoteSerializeResult>;
-      })
-      .then((data) => {
-        if (!cancelled) setSource(data);
-      })
-      .catch(() => {
-        if (!cancelled) setError('Could not load article.');
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [slug]);
-
   return (
     <article className="w-full space-y-6 text-white">
       <header className="space-y-2 border-b border-gray-900 pb-6">
@@ -60,11 +34,7 @@ export default function WritingArticlePanel({
         </time>
       </header>
       <div className="pb-8 font-mono text-sm text-gray-400">
-        {error && <p className="text-red-400/90">{error}</p>}
-        {!error && !source && (
-          <p className="text-gray-600">Loading…</p>
-        )}
-        {source && <MDXRemote {...source} components={mdxComponents} />}
+        <MDXRemote {...serialized} components={mdxComponents} />
       </div>
     </article>
   );
