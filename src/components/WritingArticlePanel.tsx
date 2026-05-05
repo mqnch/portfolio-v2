@@ -22,6 +22,7 @@ export default function WritingArticlePanel({
 }: WritingArticlePanelProps) {
   return (
     <article className="w-full space-y-6 text-white">
+      <div className="border-t border-gray-900 pt-1" aria-hidden />
       <header className="space-y-2 border-b border-gray-900 pb-6">
         <h1 className="font-mono text-lg font-medium tracking-tight text-gray-100 md:text-xl">
           {title}

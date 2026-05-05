@@ -5,6 +5,7 @@ import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import type { PostMeta } from '@/types/writing';
 import WritingPostList from '@/components/WritingPostList';
 import WritingArticlePanel from '@/components/WritingArticlePanel';
+import MinimalOverlayScrollbar from '@/components/MinimalOverlayScrollbar';
 
 type TabId = 'about' | 'projects' | 'writing';
 
@@ -22,7 +23,7 @@ const tabs: { id: TabId; label: string }[] = [
 ];
 
 const scrollPanelClass =
-  'scroll-smooth overscroll-y-contain overflow-y-auto max-h-[calc(100vh-10rem)] md:max-h-[calc(100vh-20rem)] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] [-webkit-overflow-scrolling:touch]';
+  'scrollbar-hide scroll-smooth overscroll-y-contain overflow-y-auto max-h-[calc(100vh-10rem)] md:max-h-[calc(100vh-20rem)] [-webkit-overflow-scrolling:touch] pr-3';
 
 export default function PageTabs({
   about,
@@ -169,9 +170,23 @@ export default function PageTabs({
             className={`transition-opacity duration-150 ${
               scrollableTab ? scrollPanelClass : ''
             }`}
+            style={
+              scrollableTab
+                ? {
+                    scrollbarWidth: 'none',
+                    scrollbarColor: 'transparent transparent',
+                    msOverflowStyle: 'none',
+                  }
+                : undefined
+            }
           >
             {renderContent()}
           </div>
+          <MinimalOverlayScrollbar
+            scrollRef={tabPanelRef}
+            active={scrollableTab}
+            contentKey={`${activeTab}-${writingSlug ?? ''}`}
+          />
 
           {activeTab === 'projects' && (
             <div
