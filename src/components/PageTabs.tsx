@@ -1,13 +1,16 @@
 'use client';
 
 import { useState, ReactNode, useRef, useEffect } from 'react';
+import type { PostMeta } from '@/types/writing';
+import WritingPostList from '@/components/WritingPostList';
+import WritingArticlePanel from '@/components/WritingArticlePanel';
 
 type TabId = 'about' | 'projects' | 'writing';
 
 type PageTabsProps = {
   about: ReactNode;
   projects: ReactNode;
-  writing: ReactNode;
+  writingPosts: PostMeta[];
 };
 
 const tabs: { id: TabId; label: string }[] = [
@@ -16,30 +19,78 @@ const tabs: { id: TabId; label: string }[] = [
   { id: 'writing', label: 'writing' },
 ];
 
-export default function PageTabs({ about, projects, writing }: PageTabsProps) {
+const scrollPanelClass =
+  'scroll-smooth overflow-y-auto max-h-[calc(100vh-10rem)] md:max-h-[calc(100vh-20rem)] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]';
+
+export default function PageTabs({
+  about,
+  projects,
+  writingPosts,
+}: PageTabsProps) {
   const [activeTab, setActiveTab] = useState<TabId>('about');
+  const [writingSlug, setWritingSlug] = useState<string | null>(null);
   const [showScrollIndicator, setShowScrollIndicator] = useState(false);
   const [showScrollUpIndicator, setShowScrollUpIndicator] = useState(false);
   const tabPanelRef = useRef<HTMLDivElement>(null);
+
+  const handleTabClick = (id: TabId) => {
+    if (id === 'writing' && activeTab === 'writing' && writingSlug !== null) {
+      setWritingSlug(null);
+      return;
+    }
+    if (id !== 'writing') {
+      setWritingSlug(null);
+    }
+    setActiveTab(id);
+  };
+
+  useEffect(() => {
+    if (
+      writingSlug &&
+      !writingPosts.some((p) => p.slug === writingSlug)
+    ) {
+      setWritingSlug(null);
+    }
+  }, [writingSlug, writingPosts]);
 
   const renderContent = () => {
     switch (activeTab) {
       case 'projects':
         return projects;
-      case 'writing':
-        return writing;
+      case 'writing': {
+        if (writingSlug) {
+          const post = writingPosts.find((p) => p.slug === writingSlug);
+          if (post) {
+            return (
+              <WritingArticlePanel
+                slug={post.slug}
+                title={post.title}
+                date={post.date}
+              />
+            );
+          }
+        }
+        return (
+          <WritingPostList posts={writingPosts} onSelect={setWritingSlug} />
+        );
+      }
       case 'about':
       default:
         return about;
     }
   };
 
+  const scrollableTab =
+    activeTab === 'projects' || activeTab === 'writing';
+
   // Check if content is scrollable and update scroll indicator
   useEffect(() => {
     const checkScroll = () => {
       if (tabPanelRef.current && activeTab === 'projects') {
         const { scrollTop, scrollHeight, clientHeight } = tabPanelRef.current;
-        const hasMoreContent = scrollHeight > clientHeight && scrollTop + clientHeight < scrollHeight - 10;
+        const hasMoreContent =
+          scrollHeight > clientHeight &&
+          scrollTop + clientHeight < scrollHeight - 10;
         const canScrollUp = scrollTop > 10;
         setShowScrollIndicator(hasMoreContent);
         setShowScrollUpIndicator(canScrollUp);
@@ -49,21 +100,20 @@ export default function PageTabs({ about, projects, writing }: PageTabsProps) {
       }
     };
 
-    // Check on mount and when tab changes
     checkScroll();
-    
-    // Check on scroll
+
     const tabPanel = tabPanelRef.current;
     if (tabPanel) {
       tabPanel.addEventListener('scroll', checkScroll);
-      // Also check after a short delay to account for content loading
       const timeoutId = setTimeout(checkScroll, 100);
+      const raf = requestAnimationFrame(checkScroll);
       return () => {
         tabPanel.removeEventListener('scroll', checkScroll);
         clearTimeout(timeoutId);
+        cancelAnimationFrame(raf);
       };
     }
-  }, [activeTab]);
+  }, [activeTab, writingSlug]);
 
   return (
     <main className="relative min-h-screen w-full flex flex-col items-center justify-start text-white px-4 pt-8 pb-10 md:px-8 md:pt-24 lg:pt-28">
@@ -93,7 +143,7 @@ export default function PageTabs({ about, projects, writing }: PageTabsProps) {
                   role="tab"
                   aria-selected={isActive}
                   tabIndex={isActive ? 0 : -1}
-                  onClick={() => setActiveTab(tab.id)}
+                  onClick={() => handleTabClick(tab.id)}
                   className={`border-b text-[0.7rem] font-mono uppercase tracking-[0.15em] transition-colors ${
                     isActive
                       ? 'border-gray-600 text-gray-300'
@@ -113,19 +163,18 @@ export default function PageTabs({ about, projects, writing }: PageTabsProps) {
             role="tabpanel"
             aria-labelledby={activeTab}
             className={`transition-opacity duration-150 ${
-              activeTab === 'projects' 
-                ? 'overflow-y-auto max-h-[calc(100vh-10rem)] md:max-h-[calc(100vh-20rem)] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]' 
-                : ''
+              scrollableTab ? scrollPanelClass : ''
             }`}
           >
             {renderContent()}
           </div>
-          
-          {/* Scroll up indicator arrow with gradient fade */}
+
           {activeTab === 'projects' && (
-            <div className={`absolute top-0 left-0 right-0 pointer-events-none transition-opacity duration-300 ease-in-out ${
-              showScrollUpIndicator ? 'opacity-100' : 'opacity-0'
-            }`}>
+            <div
+              className={`absolute top-0 left-0 right-0 pointer-events-none transition-opacity duration-300 ease-in-out ${
+                showScrollUpIndicator ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
               <div className="relative h-16 bg-gradient-to-b from-black/20 md:from-black/60 to-transparent flex items-start justify-center pt-4">
                 <div className="flex flex-col items-center animate-bounce">
                   <svg
@@ -145,12 +194,13 @@ export default function PageTabs({ about, projects, writing }: PageTabsProps) {
               </div>
             </div>
           )}
-          
-          {/* Scroll down indicator arrow with gradient fade */}
+
           {activeTab === 'projects' && (
-            <div className={`absolute bottom-0 left-0 right-0 pointer-events-none transition-opacity duration-300 ease-in-out ${
-              showScrollIndicator ? 'opacity-100' : 'opacity-0'
-            }`}>
+            <div
+              className={`absolute bottom-0 left-0 right-0 pointer-events-none transition-opacity duration-300 ease-in-out ${
+                showScrollIndicator ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
               <div className="relative h-16 bg-gradient-to-t from-black/20 md:from-black/60 to-transparent flex items-end justify-center pb-2">
                 <div className="flex flex-col items-center animate-bounce">
                   <svg
