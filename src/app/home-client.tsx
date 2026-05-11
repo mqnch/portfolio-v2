@@ -118,20 +118,20 @@ export default function HomeClient({
 
             <div className="flex items-baseline justify-between gap-6">
               <a
-                href="https://github.com/mqnch/spotify--"
+                href="https://github.com/mqnch/musicoverlay"
                 target="_blank"
                 rel="noreferrer"
                 className="underline-offset-4 hover:underline"
               >
                 <span className="text-gray-400">
-                  ↳ spotify--
+                  ↳ musicoverlay
                 </span>
                 <span className="text-gray-500">
                   {' '}
-                  — lightweight spotify client w/ listening data
+                  — macos music hud for spotify + apple music
                 </span>
               </a>
-              <span className="text-xs text-gray-600">rust</span>
+              <span className="text-xs text-gray-600">swift</span>
             </div>
 
             <div className="flex items-baseline justify-between gap-6">
@@ -319,42 +319,41 @@ export default function HomeClient({
           <div className="space-y-6">
             <div
               onClick={() =>
-                window.open('https://github.com/mqnch/spotify--', '_blank')
+                window.open('https://github.com/mqnch/musicoverlay', '_blank')
               }
               className="group border-t border-gray-900 pt-8 hover:border-gray-700 transition-colors cursor-pointer"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start">
                 <div className="flex gap-4 md:contents">
                   <img
-                    src="/spotify--.png"
-                    alt="spotify-- desktop app screenshot"
+                    src="/musicoverlay.png"
+                    alt="MusicOverlay desktop app screenshot"
                     className="h-16 w-24 md:h-20 md:w-32 rounded-md border border-gray-800 object-cover object-left-top opacity-80 transition-opacity group-hover:opacity-100 shrink-0"
                   />
                   <div className="flex flex-col gap-1.5 md:hidden">
                     <h3 className="text-lg font-medium group-hover:text-blue-400 transition-colors leading-tight">
-                      spotify--
+                      MusicOverlay
                     </h3>
                     <span className="text-[0.65rem] font-mono text-gray-400 tracking-wider">
-                      rust / spotify api / last.fm
+                      swift / spotify api / applescript
                     </span>
                   </div>
                 </div>
                 <div className="flex-1 space-y-1">
                   <div className="flex items-baseline justify-between gap-4">
                     <h3 className="hidden md:block text-lg font-medium group-hover:text-blue-400 transition-colors">
-                      spotify-- [WIP]
+                      musicoverlay
                     </h3>
                     <span className="hidden md:block text-xs font-mono text-gray-400">
-                      rust / spotify web api / last.fm api
+                      swift / spotify api / applescript
                     </span>
                   </div>
                   <p className="text-sm text-gray-500 max-w-xl">
-                    native spotify client built in rust, smaller and faster than the
-                    official app, with listening history and stats.
+                    keyboard-driven macos hud for controlling music without switching apps.
                   </p>
                   <div className="flex gap-4 pt-1 text-xs font-mono">
                     <a
-                      href="https://github.com/mqnch/spotify--"
+                      href="https://github.com/mqnch/musicoverlay"
                       target="_blank"
                       rel="noreferrer"
                       onClick={(e) => e.stopPropagation()}
