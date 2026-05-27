@@ -19,7 +19,7 @@ type PageTabsProps = {
 const tabs: { id: TabId; label: string }[] = [
   { id: 'about', label: 'about' },
   { id: 'projects', label: 'projects' },
-  { id: 'writing', label: 'writing' },
+  // { id: 'writing', label: 'writing' },
 ];
 
 const scrollPanelClass =
