@@ -23,7 +23,7 @@ const tabs: { id: TabId; label: string }[] = [
 ];
 
 const scrollPanelClass =
-  'scrollbar-hide scroll-smooth overscroll-y-contain overflow-y-auto max-h-[calc(100vh-10rem)] md:max-h-[calc(100vh-20rem)] [-webkit-overflow-scrolling:touch] pr-3';
+  'scrollbar-hide scroll-smooth overscroll-y-contain overflow-y-auto max-h-[calc(100vh-10rem)] md:max-h-[calc(100vh-20rem)] [-webkit-overflow-scrolling:touch] pr-3 pb-32';
 
 export default function PageTabs({
   about,
