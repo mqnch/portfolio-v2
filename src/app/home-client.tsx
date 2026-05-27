@@ -60,25 +60,6 @@ export default function HomeClient({
 
             <div className="flex items-baseline justify-between gap-6">
               <a
-                href="https://trycumo.com"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 underline-offset-4 hover:underline"
-              >
-                <p>↳</p>
-                <img
-                  src="/cumo.svg"
-                  alt="Cumo logo"
-                  className="h-4 w-4 rounded-sm"
-                  style={{ opacity: 0.85 }}
-                />
-                <p>Cumo — software engineer</p>
-              </a>
-              <span className="text-xs text-gray-600">2025—2026</span>
-            </div>
-
-            <div className="flex items-baseline justify-between gap-6">
-              <a
                 href="https://www.watonomous.ca"
                 target="_blank"
                 rel="noreferrer"
@@ -128,7 +109,7 @@ export default function HomeClient({
                 </span>
                 <span className="text-gray-500">
                   {' '}
-                  — macos music hud for spotify + apple music
+                  — macos music hud
                 </span>
               </a>
               <span className="text-xs text-gray-600">swift</span>
@@ -146,10 +127,28 @@ export default function HomeClient({
                 </span>
                 <span className="text-gray-500">
                   {' '}
-                  — internship index + application tracker
+                  — internship index + tracker
                 </span>
               </a>
               <span className="text-xs text-gray-600">web</span>
+            </div>
+
+            <div className="flex items-baseline justify-between gap-6">
+              <a
+                href="https://trycumo.com"
+                target="_blank"
+                rel="noreferrer"
+                className="underline-offset-4 hover:underline"
+              >
+                <span className="text-gray-400">
+                  ↳ cumo
+                </span>
+                <span className="text-gray-500">
+                  {' '}
+                  — nlp calendar hud
+                </span>
+              </a>
+              <span className="text-xs text-gray-600">electron</span>
             </div>
 
             <div className="flex items-baseline justify-between gap-6">
@@ -164,7 +163,7 @@ export default function HomeClient({
                 </span>
                 <span className="text-gray-500">
                   {' '}
-                  — loan defaults cox survival model
+                  — loan cox survival model
                 </span>
               </a>
               <span className="text-xs text-gray-600">ml</span>
@@ -182,28 +181,10 @@ export default function HomeClient({
                 </span>
                 <span className="text-gray-500">
                   {' '}
-                  — alphazero-like mcts + self-play
+                  — alphazero-like mcts model
                 </span>
               </a>
               <span className="text-xs text-gray-600">rl</span>
-            </div>
-
-            <div className="flex items-baseline justify-between gap-6">
-              <a
-                href="https://github.com/mqnch/hearth."
-                target="_blank"
-                rel="noreferrer"
-                className="underline-offset-4 hover:underline"
-              >
-                <span className="text-gray-400">
-                  ↳ hearth.
-                </span>
-                <span className="text-gray-500">
-                  {' '}
-                  — house listing analyzer + renovation visualizer
-                </span>
-              </a>
-              <span className="text-xs text-gray-600">web</span>
             </div>
 
             {/* <div className="flex items-baseline justify-between gap-6">
