@@ -15,21 +15,31 @@ export default function HomeClient({
     <PageTabs
       about={
         <section className="w-full space-y-5 font-mono text-sm text-gray-400">
-          <div className="border-t border-gray-900 pt-1 space-y-1"></div>
-          <div className="flex items-center gap-2">
-            <p className="text-gray-500 shrink-0 whitespace-nowrap">computer science @</p>
-            <div className="flex items-center gap-2">
-              <img
-                src="/uwaterloo.svg"
-                alt="University of Waterloo logo"
-                className="h-4 w-4 rounded-sm shrink-0"
-                style={{ opacity: 0.85 }}
-              />
-              <div className="flex flex-col md:flex-row md:items-baseline md:gap-2 leading-snug">
-                <p className="text-gray-400">uwaterloo</p>
-                <p className="text-gray-500 text-xs md:text-sm">
-                  <span className="hidden md:inline"></span>
-                </p>
+          <div className="border-t border-gray-900 pt-3 space-y-1">
+            <p className="text-[0.7rem] uppercase tracking-[0.2em] text-gray-600">
+              about
+            </p>
+            <div className="flex items-center flex-wrap gap-x-1.5 gap-y-1">
+              <p className="text-gray-400 shrink-0 whitespace-nowrap">studying CS @</p>
+              <div className="flex items-center gap-1.5 ml-1">
+                <img
+                  src="/uwaterloo.svg"
+                  alt="University of Waterloo logo"
+                  className="h-4 w-4 rounded-sm shrink-0"
+                  style={{ opacity: 0.85 }}
+                />
+                <span className="text-gray-400">uwaterloo</span>
+              </div>
+              <span className="text-gray-400 shrink-0">+</span>
+              <span className="text-gray-400 shrink-0">building agents @</span>
+              <div className="flex items-center gap-2 ml-1">
+                <img
+                  src="/mtxt.png"
+                  alt="MEMOTEXT logo"
+                  className="h-4 w-4 rounded-sm shrink-0"
+                  style={{ opacity: 0.85 }}
+                />
+                <span className="text-gray-400">MEMOTEXT</span>
               </div>
             </div>
           </div>
@@ -41,7 +51,7 @@ export default function HomeClient({
             
             <div className="flex items-baseline justify-between gap-6">
               <a
-                href="https://pbs.twimg.com/media/HEGRG_AWwAAQMal?format=jpg&name=medium"
+                href="https://mtxt.ai"
                 target="_blank"
                 rel="noreferrer"  
                 className="flex items-center gap-2 underline-offset-4 hover:underline"
